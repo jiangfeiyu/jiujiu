@@ -1,0 +1,154 @@
+
+<header class="navbar navbar-static-top" id="top" role="header" >
+    <div class="container">
+	<div class="row">
+	    <div class="col-lg-4">
+		<div class="navbar-header">
+		    <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse" style="font-size: 16px;">菜单 <i class="fa fa-bars" style="color:#003d74;font-size: 20px;"></i></button>
+		  <a href="{:U('Index/index')}" class="navbar-brand">
+		    <img src="/bitStyle/images/wz-01.png" alt="">
+		  </a>
+
+		</div>
+
+
+	    </div>
+      <!--div style="float: right;position: absolute;margin-left: 283px;margin-top: 54px;">
+        <p><h1 style="color: #ECC112">大众创业，诚信为本</h1></p>
+      </div-->
+	    <div class="col-lg-8" style="margin-top: 97px;">
+		<div class="row">
+       <!--     <div class="col-lg-12">
+            <ul class="nav navbar-nav navbar-right" role="sub-navigation">
+              <li>
+                <a> 注：任何投资均有风险，请利用您的非关键资金参与</a>
+              </li>
+            </ul>
+          </div>-->
+		    <div class="col-lg-12">
+			<ul class="nav navbar-nav navbar-right" role="sub-navigation">
+              <li <if condition="$home">class="active"</if>>
+              <a href="/" class="glyphicons home" ><i></i>首页</a>
+              </li>
+			   <li>
+              <a>
+              <span  style="color: #fff">
+          		 等级：{$userData['levelname']}
+            	</span></a>
+              </li>
+        <li class="dropdown" id="profile_nav">
+          <a href="" class="top-button" data-toggle="dropdown">
+            <span class="glyphicon glyphicon-user top-button">
+            </span>
+            <span class="hidden-xs">
+              我的档案
+            </span>
+          </a>
+          <ul class="dropdown-menu allbox-shadow pull-right" id="user-details">
+            <li class="clearfix">
+              <span class="details" style="color:#FFFFFF">
+                编号
+              </span>
+              <span class="count" style="color:#FFFF00">
+                {$userData['ue_id']|md5=###|substr=###,0,10}
+              </span>
+            </li>
+            <li class="clearfix">
+              <span class="details"  style="color:#FFFFFF">
+                账号
+              </span>
+              <span class="count" style="color:#FFFF00">
+                {$userData['ue_account']}
+              </span>
+            </li>
+            <li class="clearfix">
+              <span class="details" style="color:#FFFFFF">
+                手机号
+              </span>
+              <span class="count" style="color:#FFFF00">
+               {$userData['ue_phone']}
+              </span>
+            </li>
+            <li class="clearfix">
+              <span class="details" style="color:#FFFFFF">
+                钱包
+              </span>
+              <span class="count" style="color:#FFFF00">
+                  {$userData['ue_money']}
+                <script data-cfhash='f9e31' type="text/javascript">
+                  function jsCopy(){
+                    var e=document.getElementById("copy-num");//对象是copy-num1
+                    e.select(); //选择对象
+                    document.execCommand("Copy"); //执行浏览器复制命令
+                    alert("复制成功");
+                }
+                  /* <![CDATA[ */
+                  !
+                  function() {
+                    try {
+                      var t = "currentScript" in document ? document.currentScript: function() {
+                        for (var t = document.getElementsByTagName("script"), e = t.length; e--;) if (t[e].getAttribute("data-cfhash")) return t[e]
+                      } ();
+                      if (t && t.previousSibling) {
+                        var e, r, n, i, c = t.previousSibling,
+                        a = c.getAttribute("data-cfemail");
+                        if (a) {
+                          for (e = "", r = parseInt(a.substr(0, 2), 16), n = 2; a.length - n; n += 2) i = parseInt(a.substr(n, 2), 16) ^ r,
+                          e += String.fromCharCode(i);
+                          e = document.createTextNode(e),
+                          c.parentNode.replaceChild(e, c)
+                        }
+                        t.parentNode.removeChild(t);
+                      }
+                    } catch(u) {}
+                  } ()
+                  /* ]]> */
+                  
+                </script>
+              </span>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="{:U('Myuser/lxwm')}">
+            <span class="glyphicon glyphicon-envelope">
+            </span>
+            <span class="hidden-xs">
+              联系
+            </span>
+            <if condition="$msg_count"><span class="badge">{$msg_count}</span></if>
+          </a>
+        </li>
+        <li>
+          <a href="{:U('Reg/logout')}">
+            <span class="hidden-xs">
+              退出
+            </span>
+            <span class="glyphicon glyphicon-share-alt">
+            </span>
+          </a>
+        </li>
+      </ul>
+		    </div>
+		</div>
+	    </div>
+	</div>
+      
+	
+
+	<!--<div id="tuiguang-link" style="height: 45px;">
+	  <div class="row">
+	      <div class="col-md-12">
+		  <div class="input-group">
+  <span class="input-group-addon">推广</span>
+  <input type="text" class="form-control" id="copy-num" value="{$tgurl}">
+  <span class="input-group-addon" onclick="jsCopy()">复制</span>
+</div>
+	      </div>
+	  </div>
+      </div>-->
+      
+      
+    </div>
+  </header>
+  <script src="/cssmmm/jquery.countdown.js"></script>

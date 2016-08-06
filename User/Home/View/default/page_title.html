@@ -1,0 +1,55 @@
+<div class="page-title">
+    <div class="container">
+        <ul class="walletNav  clearfix">
+            <li class="clearfix">
+                <img src="/bitStyle/images/e-wallet.png" alt=""  class="img">
+                <span class="wallet">
+                <span class="tilte-w">
+                  玖玖钱包
+                </span>
+                <strong class="wallet-color">
+                    {$userData.ue_money}RMB
+                </strong>
+              </span>
+            </li>
+            <li class="clearfix">
+
+                    <img src="/bitStyle/images/r-wallet.png" alt="" class="img">
+              <span class="wallet">
+                奖励钱包
+                <br>
+                <strong class="wallet-color">
+                    {$userData.jl_he}RMB
+                </strong>
+              </span>
+            </li>
+            <!--<li class="clearfix">-->
+
+                    <!--<img src="/bitStyle/images/n-wallet.png" alt="" class="img">-->
+              <!--<span class="wallet">-->
+                <!--管理钱包-->
+                <!--<br>-->
+                <!--<strong class="wallet-color">-->
+                    <!--{$userData.tj_he}RMB-->
+                <!--</strong>-->
+              <!--</span>-->
+            <!--</li>-->
+            <li class="clearfix">
+              <img src="/bitStyle/images/i-wallet.png" alt="" class="img">
+              <span class="wallet">
+               激活码数量
+                <br>
+                <strong class="wallet-color">
+                    <if condition="$pin_zs"> {$pin_zs}<else/>0</if>
+                </strong>
+              </span>
+            </li>
+		<li class="clearfix">
+        <span class="wallet">
+      		  我的账号
+      		  <br>{$userData['ue_account']}
+        </span>
+        </li>
+        </ul>
+    </div>
+</div>
